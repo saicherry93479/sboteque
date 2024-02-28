@@ -1,7 +1,7 @@
 import "./App.css";
 import Home from "./Pages/Home";
 import ProductItem from "./Pages/ProductItem";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Footer from "./Components/Footer";
 import NavBar from "./Components/NavBar";
 import AboutUsPage from "./Pages/AboutUsPage";
@@ -15,7 +15,7 @@ function App() {
   return (
     <>
     <NavBar></NavBar>
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Home></Home>}>
 
@@ -26,7 +26,7 @@ function App() {
         <Route path="/productlist" element={<ProductList></ProductList>}></Route>
         <Route path="/admin" element={<AdminPage></AdminPage>}></Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
      <Footer></Footer>
       <a
         href="https://api.whatsapp.com/send?phone=9515235212&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202."
